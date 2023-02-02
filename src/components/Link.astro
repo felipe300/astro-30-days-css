@@ -1,0 +1,23 @@
+---
+interface Props {
+  path: string
+  text: string
+}
+
+const { path, text } = Astro.props
+---
+
+<a href={path} class="link">{text}</a>
+
+<style>
+.link {
+  display: flex;
+  place-items: center;
+  gap: 4px;
+  width: fit-content;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+</style>
+

@@ -1,0 +1,27 @@
+---
+import Link from "@components/Link.astro"
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout>
+  <div>
+    <h2>List of Proyects</h2>
+    <ul>
+      <li>
+        <Link path="/neon-button" text="Glowging neon-button" />
+      </li>
+    </ul>
+  </div> 
+</Layout>
+
+<style>
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding: 2px;
+  margin: 2px;
+}
+</style>
