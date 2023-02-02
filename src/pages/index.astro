@@ -1,14 +1,17 @@
 ---
 import Link from "@components/Link.astro"
 import Layout from "src/layouts/Layout.astro";
+
+const title = "Astro 30 days"
 ---
 
-<Layout>
+<Layout title={title}>
+  <h1>30 Days of CSS</h1>
   <div>
     <h2>List of Proyects</h2>
     <ul>
       <li>
-        <Link path="/neon-button" text="Glowging neon-button" />
+        <Link path="/neon-button" text="Glowing neon-button" />
       </li>
     </ul>
   </div> 
