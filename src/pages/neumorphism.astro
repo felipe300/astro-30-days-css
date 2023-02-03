@@ -1,0 +1,98 @@
+---
+import { Image } from "@astrojs/image/components";
+import "@styles/Neumorphism.css"
+---
+
+<main class="main">
+  <div class="container container-a" id="container-a">
+    <form action="" class="form" id="form-a" method="">
+      <h2 class="title">Create Account</h2>
+      <div class="form-icons">
+        <Image
+          class="form-icon"
+          src="/images/fb.svg"
+          alt="facebook logo"
+          width={25}
+          height={25}
+        />
+        <Image
+          class="form-icon"
+          src="/images/linkedin.svg"
+          alt="Linkedin logo"
+          width={25}
+          height={25}
+        />
+        <Image
+          class="form-icon"
+          src="/images/twitter.svg"
+          alt="Twitter logo"
+          width={25}
+          height={25}
+        />
+      </div>
+      <span class="form-span">
+        or use email for registration
+      </span>
+      <input type="text" class="form-input" placeholder="Name">
+      <input type="text" class="form-input" placeholder="Email">
+      <input type="password" class="form-input" placeholder="Password">
+      <button class="button submit">Sign Up</button>
+    </form>
+  </div>
+
+  <div class="container container-b" id="container-b">
+    <form action="" class="form" id="form-b" method="">
+      <h2 class="title">Sign in to Website</h2>
+      <div class="form-icons">
+        <Image
+          class="form-icon"
+          src="/images/fb.svg"
+          alt="facebook logo"
+          width={25}
+          height={25}
+        />
+        <Image
+          class="form-icon"
+          src="/images/linkedin.svg"
+          alt="Linkedin logo"
+          width={25}
+          height={25}
+        />
+        <Image
+          class="form-icon"
+          src="/images/twitter.svg"
+          alt="Twitter logo"
+          width={25}
+          height={25}
+        />
+      </div>
+      <span class="form-span">
+        or use email account
+      </span>
+      <input type="text" class="form-input" placeholder="Email">
+      <input type="password" class="form-input" placeholder="Password">
+      <a href="" class="form-link">forgot your password?</a>
+      <button class="button submit">Sign In</button>
+    </form>
+  </div>
+
+  <div class="switch" id="switch-cnt">
+    <div class="switch-circle"></div>
+    <div class="switch-circle switch-circle-t"></div>
+    <div class="switch-container" id="switch-c1">
+      <h2 class="title">Welcome Back!</h2>
+      <p class="description">To keep connected with us please login with your personal info</p>
+      <button class="switch-button button switch-btn">Sign In</button>
+    </div>
+    <div class="switch-container is-hidden" id="switch-c2">
+      <h2 class="switch-title title">Hello Friend!</h2>
+      <p class="description">Ener your personal details and start your journey with us!</p>
+      <button class="switch-button button switch-btn">Sign Up</button>
+    </div>
+
+  </div>
+</main>
+
+<script>
+  import "@scripts/neumorphism.js"
+</script>
