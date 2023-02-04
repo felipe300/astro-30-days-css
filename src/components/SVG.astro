@@ -1,23 +1,23 @@
 ---
 import { Image } from "@astrojs/image/components";
+import type { ExtensionLevel } from "@scripts/dashboard";
 
 interface Props {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  classes?: string
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  classes?: string;
+  ext: ExtensionLevel;
 }
 
-const { src, alt, width = 25, height = 25, classes } = Astro.props;
+const { src, alt, width = 25, height = 25, classes, ext } = Astro.props;
 ---
 
 <Image
-  src={`/images/svg/${src}.svg`}
-  alt={`${alt} svg`}
+  src={`/images/svg/${src}.${ext}`}
+  alt={`${alt} ${ext === "svg" ? "svg" : "image"}`}
   width={width}
   height={height}
-  class:list={[
-    classes
-  ]}
+  class:list={[classes]}
 />

@@ -1,6 +1,6 @@
 ---
 import SVG from "@components/SVG.astro";
-import "@styles/Neumorphism.css"
+import "@styles/Neumorphism.css";
 ---
 
 <main class="main">
@@ -8,28 +8,14 @@ import "@styles/Neumorphism.css"
     <form action="" class="form" id="form-a" method="">
       <h2 class="title">Create Account</h2>
       <div class="form-icons">
-        <SVG
-          classes="form-icon"
-          src="fb"
-          alt="Facebook"
-        />
-        <SVG
-          classes="form-icon"
-          src="linkedin"
-          alt="Linkedin"
-        />
-        <SVG
-          classes="form-icon"
-          src="twitter"
-          alt="Twitter"
-        />
+        <SVG classes="form-icon" src="fb" alt="Facebook" ext="svg" />
+        <SVG classes="form-icon" src="linkedin" alt="Linkedin" ext="svg" />
+        <SVG classes="form-icon" src="twitter" alt="Twitter" ext="svg" />
       </div>
-      <span class="form-span">
-        or use email for registration
-      </span>
-      <input type="text" class="form-input" placeholder="Name">
-      <input type="text" class="form-input" placeholder="Email">
-      <input type="password" class="form-input" placeholder="Password">
+      <span class="form-span"> or use email for registration</span>
+      <input type="text" class="form-input" placeholder="Name" />
+      <input type="text" class="form-input" placeholder="Email" />
+      <input type="password" class="form-input" placeholder="Password" />
       <button class="button submit">Sign Up</button>
     </form>
   </div>
@@ -38,27 +24,13 @@ import "@styles/Neumorphism.css"
     <form action="" class="form" id="form-b" method="">
       <h2 class="title">Sign in to Website</h2>
       <div class="form-icons">
-        <SVG
-          classes="form-icon"
-          src="fb"
-          alt="Facebook"
-        />
-        <SVG
-          classes="form-icon"
-          src="linkedin"
-          alt="Linkedin"
-        />
-        <SVG
-          classes="form-icon"
-          src="twitter"
-          alt="Twitter"
-        />
+        <SVG classes="form-icon" src="fb" alt="Facebook" ext="svg" />
+        <SVG classes="form-icon" src="linkedin" alt="Linkedin" ext="svg" />
+        <SVG classes="form-icon" src="twitter" alt="Twitter" ext="svg" />
       </div>
-      <span class="form-span">
-        or use email account
-      </span>
-      <input type="text" class="form-input" placeholder="Email">
-      <input type="password" class="form-input" placeholder="Password">
+      <span class="form-span"> or use email account</span>
+      <input type="text" class="form-input" placeholder="Email" />
+      <input type="password" class="form-input" placeholder="Password" />
       <a href="" class="form-link">forgot your password?</a>
       <button class="button submit">Sign In</button>
     </form>
@@ -69,18 +41,21 @@ import "@styles/Neumorphism.css"
     <div class="switch-circle switch-circle-t"></div>
     <div class="switch-container" id="switch-c1">
       <h2 class="title">Welcome Back!</h2>
-      <p class="description">To keep connected with us please login with your personal info</p>
+      <p class="description">
+        To keep connected with us please login with your personal info
+      </p>
       <button class="switch-button button switch-btn">Sign In</button>
     </div>
     <div class="switch-container is-hidden" id="switch-c2">
       <h2 class="switch-title title">Hello Friend!</h2>
-      <p class="description">Ener your personal details and start your journey with us!</p>
+      <p class="description">
+        Ener your personal details and start your journey with us!
+      </p>
       <button class="switch-button button switch-btn">Sign Up</button>
     </div>
-
   </div>
 </main>
 
 <script>
-  import "@scripts/neumorphism.js"
+  import "@scripts/neumorphism.js";
 </script>
