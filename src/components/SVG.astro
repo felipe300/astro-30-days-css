@@ -1,0 +1,23 @@
+---
+import { Image } from "@astrojs/image/components";
+
+interface Props {
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  classes?: string
+}
+
+const { src, alt, width = 25, height = 25, classes } = Astro.props;
+---
+
+<Image
+  src={`/images/svg/${src}.svg`}
+  alt={`${alt} svg`}
+  width={width}
+  height={height}
+  class:list={[
+    classes
+  ]}
+/>
