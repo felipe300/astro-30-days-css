@@ -15,7 +15,7 @@ const { src, alt, width = 25, height = 25, classes, ext } = Astro.props;
 ---
 
 <Image
-  src={`/images/svg/${src}.${ext}`}
+  src={`/images/${ext === "svg" ? "svg" : "jpg"}/${src}.${ext}`}
   alt={`${alt} ${ext === "svg" ? "svg" : "image"}`}
   width={width}
   height={height}
