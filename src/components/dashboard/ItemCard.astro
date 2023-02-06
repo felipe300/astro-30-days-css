@@ -1,0 +1,33 @@
+---
+import type { TaskStatus } from "@scripts/dashboard";
+
+interface Props {
+  id: string;
+  isChecked?: boolean;
+  task: string;
+  status: TaskStatus;
+}
+
+const { id, isChecked = false, task, status } = Astro.props;
+---
+
+<div class="task">
+  <input
+    type="checkbox"
+    name="task"
+    id={id}
+    class="task-item"
+    checked={isChecked}
+  />
+  <label for={id}>
+    <span class="label-text">{task}</span>
+  </label>
+  <span class:list=`tag ${status}`
+    >{
+      (status === "approved" && "Approved") ||
+        (status === "progress" && "In Progress") ||
+        (status === "review" && "In Review") ||
+        (status === "waiting" && "Waiting")
+    }</span
+  >
+</div>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  id: string;
+  text: string;
+}
+
+const { id, text } = Astro.props;
+---
+
+<div class="label-wrapper">
+  <input type="radio" name="nav" id={id} class="nav-item" />
+  <label for={id} class="category">{text}</label>
+</div>

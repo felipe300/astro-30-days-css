@@ -1,0 +1,191 @@
+---
+import ItemCard from "@components/dashboard/ItemCard.astro";
+import ItemNav from "@components/dashboard/ItemNav.astro";
+import SvgList from "@components/dashboard/SvgList.astro";
+import { actionList, categoryList } from "@scripts/dashboard";
+import "@styles/Dashboard.css";
+---
+
+<main class="task-manager">
+  <!-- LEFT BAR START -->
+  <div class="left-bar">
+    <div class="upper-part">
+      <div class="actions">
+        <div class="circle"></div>
+        <div class="circle-2"></div>
+      </div>
+    </div>
+
+    <!-- LEFT CONTENT START -->
+    <aside class="left-content">
+      <ul class="action-list">
+        {
+          actionList.map(({ svg, text, ext }) => (
+            <SvgList svg={svg} text={text} ext={ext} />
+          ))
+        }
+      </ul>
+      <ul class="category-list">
+        {
+          categoryList.map(({ svg, text, ext }) => (
+            <SvgList svg={svg} text={text} ext={ext} />
+          ))
+        }
+      </ul>
+    </aside>
+    <!-- LEFT CONTENT END -->
+  </div>
+  <!-- LEFT BAR END -->
+  <!-- PAGE CONTENT START -->
+  <section class="page-content">
+    <div class="header">Today Tasks</div>
+    <!-- CONTENT CATEGORIES START -->
+    <div class="content-categories">
+      <ItemNav id="opt-1" text="All" />
+      <ItemNav id="opt-2" text="Important" />
+      <ItemNav id="opt-3" text="Notes" />
+      <ItemNav id="opt-4" text="Links" />
+    </div>
+    <!-- CONTENT CATEGORIES END -->
+
+    <!-- TASKS WRAPPER START -->
+    <div class="tasks-wrapper">
+      <ItemCard
+        id="item-1"
+        status={"approved"}
+        task="Dashboard Design Implementation"
+        isChecked
+      />
+      <ItemCard
+        id="item-2"
+        status={"progress"}
+        task="Create a userflow"
+        isChecked
+      />
+      <ItemCard
+        id="item-3"
+        status={"review"}
+        task="Aplication Implementation"
+      />
+      <ItemCard id="item-4" status={"progress"} task="Create a Dashboard" />
+      <ItemCard
+        id="item-5"
+        status={"approved"}
+        task="Create a Web Application Design"
+      />
+      <ItemCard id="item-6" status={"waiting"} task="Interactive Design" />
+
+      <div class="header upcoming">Upcoming Tasks</div>
+
+      <ItemCard
+        id="item-7"
+        status={"waiting"}
+        task="Dashboard Design Implementation"
+      />
+      <ItemCard id="item-8" status={"waiting"} task="Create a userflow" />
+      <ItemCard
+        id="item-9"
+        status={"waiting"}
+        task="Application Implementation"
+      />
+      <ItemCard id="item-10" status={"waiting"} task="Create a Dashboard" />
+    </div>
+    <!-- TASKS WRAPPER END -->
+  </section>
+  <!-- PAGE CONTENT END -->
+
+  <!-- RIGHT BAR START -->
+  <aside class="right-bar">
+    <div class="top-part">
+      <img
+        src="images/svg/users.svg"
+        alt="Users Logo"
+        class="feather feather-users"
+      />
+      <div class="count">6</div>
+    </div>
+    <div class="header">Schedule</div>
+    <div class="right-content">
+      <div class="task-box yellow">
+        <div class="description-task">
+          <div class="time">08:00 - 9:00 AM</div>
+          <div class="task-name">Product Review</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img src="images/img/img1.jpg" alt="member" />
+          <img src="images/img/img2.jpg" alt="member-2" />
+          <img src="images/img/img3.jpg" alt="member-3" />
+          <img src="images/img/img4.jpg" alt="member-4" />
+        </div>
+      </div>
+      <div class="task-box blue">
+        <div class="description-task">
+          <div class="time">10:00 - 11:00 AM</div>
+          <div class="task-name">Design Meetings</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img src="images/img/img5.jpg" alt="member" />
+          <img src="images/img/img6.jpg" alt="member-2" />
+          <img src="images/img/img7.jpg" alt="member-3" />
+        </div>
+      </div>
+      <div class="task-box red">
+        <div class="description-task">
+          <div class="time">01:00 - 02:00 PM</div>
+          <div class="task-name">Team Meeting</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img src="images/img/img1.jpg" alt="member" />
+          <img src="images/img/img2.jpg" alt="member-2" />
+          <img src="images/img/img3.jpg" alt="member-3" />
+          <img src="images/img/img4.jpg" alt="member-4" />
+        </div>
+      </div>
+      <div class="task-box green">
+        <div class="description-task">
+          <div class="time">03:00 - 04:00 PM</div>
+          <div class="task-name">Release Event</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img src="images/img/img5.jpg" alt="member" />
+          <img src="images/img/img6.jpg" alt="member-2" />
+          <img src="images/img/img7.jpg" alt="member-3" />
+          <img src="images/img/img8.jpg" alt="member-4" />
+          <img src="images/img/img9.jpg" alt="member-5" />
+        </div>
+      </div>
+      <div class="task-box blue">
+        <div class="description-task">
+          <div class="time">08:00 - 09:00 PM</div>
+          <div class="task-name">Release Event</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img src="images/img/img5.jpg" alt="member" />
+          <img src="images/img/img6.jpg" alt="member-2" />
+          <img src="images/img/img7.jpg" alt="member-3" />
+          <img src="images/img/img8.jpg" alt="member-4" />
+          <img src="images/img/img9.jpg" alt="member-5" />
+        </div>
+      </div>
+      <div class="task-box yellow">
+        <div class="description-task">
+          <div class="time">11:00 - 12:00 PM</div>
+          <div class="task-name">Practice</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img src="images/img/img1.jpg" alt="member" />
+          <img src="images/img/img2.jpg" alt="member-2" />
+          <img src="images/img/img3.jpg" alt="member-3" />
+          <img src="images/img/img4.jpg" alt="member-4" />
+        </div>
+      </div>
+    </div>
+  </aside>
+  <!-- RIGHT BAR END -->
+</main>

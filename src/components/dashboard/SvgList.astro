@@ -1,0 +1,17 @@
+---
+import SVG from "@components/SVG.astro";
+import type { ExtensionLevel } from "@scripts/dashboard";
+
+interface Props {
+  svg: string;
+  text: string;
+  ext: ExtensionLevel;
+}
+
+const { svg, text, ext } = Astro.props;
+---
+
+<li class="item">
+  <SVG src={svg} alt={text} ext={ext} classes=`feather feather-${svg}` />
+  <span>{text}</span>
+</li>
