@@ -38,26 +38,18 @@ body {
   padding: 20px;
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
-  background-image: linear-gradient(
-      21deg,
+  background-image: linear-gradient(21deg,
       rgba(64, 83, 206, 0.3697003234675773) 68%,
-      rgba(255, 206, 196, 0.5) 163%
-    ),
-    linear-gradient(
-      163deg,
+      rgba(255, 206, 196, 0.5) 163%),
+    linear-gradient(163deg,
       rgba(49, 146, 170, 0.07944489965716128) 86%,
-      rgba(239, 112, 138, 0.5) 40%
-    ),
-    linear-gradient(
-      30deg,
+      rgba(239, 112, 138, 0.5) 40%),
+    linear-gradient(30deg,
       rgba(76, 79, 173, 0.6173675716587805) 22%,
-      rgba(237, 106, 134, 0.5) 169%
-    ),
-    linear-gradient(
-      48deg,
+      rgba(237, 106, 134, 0.5) 169%),
+    linear-gradient(48deg,
       rgba(31, 85, 147, 0.7323890641868473) 64%,
-      rgba(247, 126, 132, 0.5) 43%
-    );
+      rgba(247, 126, 132, 0.5) 43%);
   background-blend-mode: overlay, multiply, color, normal;
 }
 
@@ -98,6 +90,11 @@ ul {
   color: var(--main-color);
   margin-bottom: 14px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.item:hover {
+  color: var(--secondary-color);
 }
 
 .item img {
@@ -113,6 +110,10 @@ ul {
 
 .category-list .item {
   color: var(--secondary-color);
+}
+
+.category-list .item:hover {
+  color: var(--main-color);
 }
 
 .actions {
@@ -174,10 +175,10 @@ ul {
   cursor: pointer;
 }
 
-#opt-1:checked + label,
-#opt-2:checked + label,
-#opt-3:checked + label,
-#opt-4:checked + label {
+#opt-1:checked+label,
+#opt-2:checked+label,
+#opt-3:checked+label,
+#opt-4:checked+label {
   color: var(--checkbox-color);
   border-bottom: 2px solid var(--checkbox-color);
 }
@@ -229,7 +230,7 @@ label .label-text:before {
   transition: 0.2s ease;
 }
 
-.task-item:checked + label .label-text::before {
+.task-item:checked+label .label-text::before {
   background-color: var(--checkbox-color);
   border: none;
   background-image: url("/images/svg/check.svg");

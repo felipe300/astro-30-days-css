@@ -1,0 +1,28 @@
+---
+import type { EventTime } from "@scripts/dashboard";
+
+interface Props {
+  time: EventTime;
+  color: "yellow" | "red" | "blue" | "green";
+  eventTitle:
+    | "Product Review"
+    | "Design Meetings"
+    | "Team Meeting"
+    | "Release Event"
+    | "Practice";
+  classes?: string;
+}
+
+const { time, classes, eventTitle, color } = Astro.props;
+---
+
+<div class:list={[classes, `task-box ${color}`]}>
+  <div class="description-task">
+    <div class="time">{time}</div>
+    <div class="task-name">{eventTitle}</div>
+  </div>
+  <div class="more-button"></div>
+  <div class="members">
+    <slot />
+  </div>
+</div>

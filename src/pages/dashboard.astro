@@ -1,4 +1,5 @@
 ---
+import Event from "@components/dashboard/Event.astro";
 import ItemCard from "@components/dashboard/ItemCard.astro";
 import ItemNav from "@components/dashboard/ItemNav.astro";
 import SvgList from "@components/dashboard/SvgList.astro";
@@ -108,85 +109,59 @@ import "@styles/Dashboard.css";
     </div>
     <div class="header">Schedule</div>
     <div class="right-content">
-      <div class="task-box yellow">
-        <div class="description-task">
-          <div class="time">08:00 - 9:00 AM</div>
-          <div class="task-name">Product Review</div>
-        </div>
-        <div class="more-button"></div>
-        <div class="members">
-          <SVG src="img1" alt="member" ext="jpg" />
-          <SVG src="img2" alt="member-2" ext="jpg" />
-          <SVG src="img3" alt="member-3" ext="jpg" />
-          <SVG src="img4" alt="member-4" ext="jpg" />
-        </div>
-      </div>
-      <div class="task-box blue">
-        <div class="description-task">
-          <div class="time">10:00 - 11:00 AM</div>
-          <div class="task-name">Design Meetings</div>
-        </div>
-        <div class="more-button"></div>
-        <div class="members">
-          <SVG src="img5" alt="member" ext="jpg" />
-          <SVG src="img6" alt="member-2" ext="jpg" />
-          <SVG src="img7" alt="member-3" ext="jpg" />
-        </div>
-      </div>
-      <div class="task-box red">
-        <div class="description-task">
-          <div class="time">01:00 - 02:00 PM</div>
-          <div class="task-name">Team Meeting</div>
-        </div>
-        <div class="more-button"></div>
-        <div class="members">
-          <SVG src="img1" alt="member" ext="jpg" />
-          <SVG src="img2" alt="member-2" ext="jpg" />
-          <SVG src="img3" alt="member-3" ext="jpg" />
-          <SVG src="img4" alt="member-4" ext="jpg" />
-        </div>
-      </div>
-      <div class="task-box green">
-        <div class="description-task">
-          <div class="time">03:00 - 04:00 PM</div>
-          <div class="task-name">Release Event</div>
-        </div>
-        <div class="more-button"></div>
-        <div class="members">
-          <SVG src="img5" alt="member" ext="jpg" />
-          <SVG src="img6" alt="member-2" ext="jpg" />
-          <SVG src="img7" alt="member-3" ext="jpg" />
-          <SVG src="img8" alt="member-4" ext="jpg" />
-          <SVG src="img9" alt="member-5" ext="jpg" />
-        </div>
-      </div>
-      <div class="task-box blue">
-        <div class="description-task">
-          <div class="time">08:00 - 09:00 PM</div>
-          <div class="task-name">Release Event</div>
-        </div>
-        <div class="more-button"></div>
-        <div class="members">
-          <SVG src="img5" alt="member" ext="jpg" />
-          <SVG src="img6" alt="member-2" ext="jpg" />
-          <SVG src="img7" alt="member-3" ext="jpg" />
-          <SVG src="img8" alt="member-4" ext="jpg" />
-          <SVG src="img9" alt="member-5" ext="jpg" />
-        </div>
-      </div>
-      <div class="task-box yellow">
-        <div class="description-task">
-          <div class="time">11:00 - 12:00 PM</div>
-          <div class="task-name">Practice</div>
-        </div>
-        <div class="more-button"></div>
-        <div class="members">
-          <SVG src="img1" alt="member" ext="jpg" />
-          <SVG src="img2" alt="member-2" ext="jpg" />
-          <SVG src="img3" alt="member-3" ext="jpg" />
-          <SVG src="img4" alt="member-4" ext="jpg" />
-        </div>
-      </div>
+      <Event
+        time={"08:00 - 9:00 AM"}
+        eventTitle={"Product Review"}
+        color={"yellow"}
+      >
+        <SVG src="img1" alt="member" ext="jpg" />
+        <SVG src="img2" alt="member-2" ext="jpg" />
+        <SVG src="img3" alt="member-3" ext="jpg" />
+        <SVG src="img4" alt="member-4" ext="jpg" />
+      </Event>
+      <Event
+        time={"10:00 - 11:00 AM"}
+        eventTitle={"Design Meetings"}
+        color={"blue"}
+      >
+        <SVG src="img5" alt="member" ext="jpg" />
+        <SVG src="img6" alt="member-2" ext="jpg" />
+        <SVG src="img7" alt="member-3" ext="jpg" />
+      </Event>
+      <Event time={"01:00 - 2:00 PM"} eventTitle={"Team Meeting"} color={"red"}>
+        <SVG src="img1" alt="member" ext="jpg" />
+        <SVG src="img2" alt="member-2" ext="jpg" />
+        <SVG src="img3" alt="member-3" ext="jpg" />
+        <SVG src="img4" alt="member-4" ext="jpg" />
+      </Event>
+      <Event
+        time={"03:00 - 4:00 PM"}
+        eventTitle={"Release Event"}
+        color={"green"}
+      >
+        <SVG src="img5" alt="member" ext="jpg" />
+        <SVG src="img6" alt="member-2" ext="jpg" />
+        <SVG src="img7" alt="member-3" ext="jpg" />
+        <SVG src="img8" alt="member-4" ext="jpg" />
+        <SVG src="img9" alt="member-5" ext="jpg" />
+      </Event>
+      <Event
+        time={"08:00 - 9:00 PM"}
+        eventTitle={"Release Event"}
+        color={"blue"}
+      >
+        <SVG src="img5" alt="member" ext="jpg" />
+        <SVG src="img6" alt="member-2" ext="jpg" />
+        <SVG src="img7" alt="member-3" ext="jpg" />
+        <SVG src="img8" alt="member-4" ext="jpg" />
+        <SVG src="img9" alt="member-5" ext="jpg" />
+      </Event>
+      <Event time={"11:00 - 12:00 PM"} eventTitle={"Practice"} color={"yellow"}>
+        <SVG src="img1" alt="member" ext="jpg" />
+        <SVG src="img2" alt="member-2" ext="jpg" />
+        <SVG src="img3" alt="member-3" ext="jpg" />
+        <SVG src="img4" alt="member-4" ext="jpg" />
+      </Event>
     </div>
   </aside>
   <!-- RIGHT BAR END -->

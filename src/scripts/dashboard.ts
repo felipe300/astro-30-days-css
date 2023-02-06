@@ -11,9 +11,18 @@ const Status = {
   waiting: "waiting"
 } as const
 
+const Event = {
+  "08:00 - 9:00 AM": "08:00 - 9:00 AM",
+  "10:00 - 11:00 AM": "10:00 - 11:00 AM",
+  "01:00 - 2:00 PM": "01:00 - 2:00 PM",
+  "03:00 - 4:00 PM": "03:00 - 4:00 PM",
+  "08:00 - 9:00 PM": "08:00 - 9:00 PM",
+  "11:00 - 12:00 PM": "11:00 - 12:00 PM"
+} as const
 
 export type ExtensionLevel = keyof typeof Extension
 export type TaskStatus = keyof typeof Status
+export type EventTime = keyof typeof Event
 
 type List = {
   svg: string
